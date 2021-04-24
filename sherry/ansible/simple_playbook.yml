@@ -1,0 +1,15 @@
+---
+- hosts: kuber-test-sh
+  become: true
+  tasks:
+    - name: installing-epel
+      yum:
+        name: epel-release
+        state: present 
+
+    - name: installing-htop
+      yum:
+        name: htop
+        state: present 
+    
+
